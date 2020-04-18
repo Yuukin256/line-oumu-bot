@@ -73,18 +73,30 @@ async function handleMessage(event: WebhookEvent) {
             previewImageUrl: 'https://amd.c.yimg.jp/amd/20200318-03180164-sph-000-3-view.jpg',
           };
           break;
+        case 'イエス':
+        case 'イエス！':
+        case 'Yes':
+        case 'Yes!':
+        case 'yes':
+        case 'yes!':
+          res = {
+            type: 'text',
+            text: '高須クリニック',
+          };
+          break;
+        case '死ね':
+        case 'しね':
+          res = {
+            type: 'text',
+            text: 'お前が' + event.message.text,
+          };
+          break;
         default:
           res = {
             type: 'text',
             text: event.message.text,
           };
           break;
-      }
-      if (~event.message.text.indexOf('死ね') || ~event.message.text.indexOf('しね')) {
-        res = {
-          type: 'text',
-          text: 'お前が' + event.message.text,
-        };
       }
       break;
     case 'sticker':
