@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc index.ts"
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,6 @@
   "description": "",
   "dependencies": {
     "@line/bot-sdk": "^6.8.4",
-    "@types/aws-lambda": "^8.10.50"
+    "aws-lambda": "^1.0.5"
   }
 }
